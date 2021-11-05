@@ -1,0 +1,2289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="听话的便当🍱">
+    
+    <title>
+        
+            Linux命令行 |
+        
+        便当&#39;s Blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/88135097?v=4">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"wzk0.github.ioo","root":"/","language":"zh-CN","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"https://avatars.githubusercontent.com/u/88135097?v=4","favicon":"https://avatars.githubusercontent.com/u/88135097?v=4","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"在学习！"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"3.4.3"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 月前","year":"%s 年前"};
+  </script>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="在学习!" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fas fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                便当&#39;s Blog
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">Linux命令行</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="https://avatars.githubusercontent.com/u/88135097?v=4">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">听话的便当🍱</span>
+                        
+                            <span class="author-label">一个小白</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;2021-11-05 08:29:15
+    </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/Linux/">Linux</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>6.5k 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>27 分钟</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>本文章会不断更新和完善。<br><code>快捷键 Ctrl+F 进行搜索</code> </p>
+<h3 id="公钥私钥"><a href="#公钥私钥" class="headerlink" title="公钥私钥"></a>公钥私钥</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td># ssh-keygen -t rsa -C “邮箱地址”</td>
+<td>产生公钥私钥对</td>
+</tr>
+<tr>
+<td># ssh-copy-id -i ~/.ssh/id_rsa.pub <a class="link"   href="mailto:&#x72;&#111;&#111;&#116;&#64;&#x31;&#57;&#50;&#46;&#x31;&#x36;&#x38;&#x2e;&#x30;&#46;&#x32;" >&#x72;&#111;&#111;&#116;&#64;&#x31;&#57;&#50;&#46;&#x31;&#x36;&#x38;&#x2e;&#x30;&#46;&#x32;<i class="fas fa-external-link-alt"></i></a></td>
+<td>将本地机器的公钥复制到远程机器的root用户的authorized_keys文件中</td>
+</tr>
+<tr>
+<td># ssh-keygen -p -f ~/.ssh/id_rsa</td>
+<td>添加或修改SSH-key的私钥密码</td>
+</tr>
+<tr>
+<td># ssh-keygen -y -f ~/.ssh/id_rsa &gt; id_rsa.pub</td>
+<td>从私钥中生成公钥</td>
+</tr>
+<tr>
+<td># ssh-keygen -R 192.168.2.8</td>
+<td>从known_hosts文件中删除公钥信息</td>
+</tr>
+</tbody></table>
+<h3 id="系统信息"><a href="#系统信息" class="headerlink" title="系统信息"></a>系统信息</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td># arch</td>
+<td>显示机器的处理器架构</td>
+</tr>
+<tr>
+<td># cal 2016</td>
+<td>显示2016年的日历表</td>
+</tr>
+<tr>
+<td># cat /proc/cpuinfo</td>
+<td>查看CPU信息</td>
+</tr>
+<tr>
+<td># cat /proc/interrupts</td>
+<td>显示中断</td>
+</tr>
+<tr>
+<td># cat /proc/meminfo</td>
+<td>校验内存使用</td>
+</tr>
+<tr>
+<td># cat /proc/swaps</td>
+<td>显示哪些swap被使用</td>
+</tr>
+<tr>
+<td># cat /proc/version</td>
+<td>显示内核版本</td>
+</tr>
+<tr>
+<td># cat /proc/net/dev</td>
+<td>显示网络适配器及统计</td>
+</tr>
+<tr>
+<td># cat /proc/mounts</td>
+<td>显示已加载的文件系统</td>
+</tr>
+<tr>
+<td># clock -w</td>
+<td>将时间修改保存到BIOS</td>
+</tr>
+<tr>
+<td># date</td>
+<td>显示系统日期</td>
+</tr>
+<tr>
+<td># date 072308302016.00</td>
+<td>设置日期和时间 - 月日时分年.秒</td>
+</tr>
+<tr>
+<td># dmidecode -q</td>
+<td>显示硬件系统部件 - (SMBIOS / DMI)</td>
+</tr>
+<tr>
+<td># hdparm -i /dev/hda</td>
+<td>罗列一个磁盘的架构特性</td>
+</tr>
+<tr>
+<td># hdparm -tT /dev/sda</td>
+<td>在磁盘上执行测试性读取操作</td>
+</tr>
+<tr>
+<td># lspci -tv</td>
+<td>罗列 PCI 设备</td>
+</tr>
+<tr>
+<td># lsusb -tv</td>
+<td>显示 USB 设备</td>
+</tr>
+<tr>
+<td># uname -m</td>
+<td>显示机器的处理器架构</td>
+</tr>
+<tr>
+<td># uname -r</td>
+<td>显示正在使用的内核版本</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="关机"><a href="#关机" class="headerlink" title="关机"></a>关机</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td># init 0</td>
+<td>关闭系统</td>
+</tr>
+<tr>
+<td># logout</td>
+<td>注销</td>
+</tr>
+<tr>
+<td># reboot</td>
+<td>重启</td>
+</tr>
+<tr>
+<td># shutdown -h now</td>
+<td>关闭系统</td>
+</tr>
+<tr>
+<td># shutdown -h 16:30 &amp;</td>
+<td>按预定时间关闭系统</td>
+</tr>
+<tr>
+<td># shutdown -c</td>
+<td>取消按预定时间关闭系统</td>
+</tr>
+<tr>
+<td># shutdown -r now</td>
+<td>重启</td>
+</tr>
+<tr>
+<td># telinit 0</td>
+<td>关闭系统</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="文件和目录"><a href="#文件和目录" class="headerlink" title="文件和目录"></a>文件和目录</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td># cd /home</td>
+<td>进入 ‘/home’ 目录</td>
+</tr>
+<tr>
+<td># cd ..</td>
+<td>返回上一级目录</td>
+</tr>
+<tr>
+<td># cd ../..</td>
+<td>返回上两级目录</td>
+</tr>
+<tr>
+<td># cd</td>
+<td>进入个人的主目录</td>
+</tr>
+<tr>
+<td># cd ~user1</td>
+<td>进入个人的主目录</td>
+</tr>
+<tr>
+<td># cd -</td>
+<td>返回上次所在的目录</td>
+</tr>
+<tr>
+<td># cp file1 file2</td>
+<td>复制一个文件</td>
+</tr>
+<tr>
+<td># cp dir/* .</td>
+<td>复制一个目录下的所有文件到当前工作目录</td>
+</tr>
+<tr>
+<td># cp -a /tmp/dir1 .</td>
+<td>复制一个目录到当前工作目录</td>
+</tr>
+<tr>
+<td># cp -a dir1 dir2</td>
+<td>复制一个目录</td>
+</tr>
+<tr>
+<td># cp file file1</td>
+<td>将file复制为file1</td>
+</tr>
+<tr>
+<td># iconv -l</td>
+<td>列出已知的编码</td>
+</tr>
+<tr>
+<td># iconv -f fromEncoding -t toEncoding inputFile &gt; outputFile</td>
+<td>改变字符的编码</td>
+</tr>
+<tr>
+<td># find . -maxdepth 1 -name *.jpg -print -exec convert</td>
+<td>batch resize files in the current directory and send them to a thumbnails directory (requires convert from Imagemagick)</td>
+</tr>
+<tr>
+<td># ln -s file1 lnk1</td>
+<td>创建一个指向文件或目录的软链接</td>
+</tr>
+<tr>
+<td># ln file1 lnk1</td>
+<td>创建一个指向文件或目录的物理链接</td>
+</tr>
+<tr>
+<td># ls</td>
+<td>查看目录中的文件</td>
+</tr>
+<tr>
+<td># ls -F</td>
+<td>查看目录中的文件</td>
+</tr>
+<tr>
+<td># ls -l</td>
+<td>显示文件和目录的详细资料</td>
+</tr>
+<tr>
+<td># ls -a</td>
+<td>显示隐藏文件</td>
+</tr>
+<tr>
+<td># ls *[0-9]*</td>
+<td>显示包含数字的文件名和目录名</td>
+</tr>
+<tr>
+<td># lstree</td>
+<td>显示文件和目录由根目录开始的树形结构</td>
+</tr>
+<tr>
+<td># mkdir dir1</td>
+<td>创建一个叫做 ‘dir1’ 的目录</td>
+</tr>
+<tr>
+<td># mkdir dir1 dir2</td>
+<td>同时创建两个目录</td>
+</tr>
+<tr>
+<td># mkdir -p /tmp/dir1/dir2</td>
+<td>创建一个目录树</td>
+</tr>
+<tr>
+<td># mv dir1 new_dir</td>
+<td>重命名/移动 一个目录</td>
+</tr>
+<tr>
+<td># pwd</td>
+<td>显示工作路径</td>
+</tr>
+<tr>
+<td># rm -f file1</td>
+<td>删除一个叫做 ‘file1’ 的文件</td>
+</tr>
+<tr>
+<td># rm -rf dir1</td>
+<td>删除一个叫做 ‘dir1’ 的目录并同时删除其内容</td>
+</tr>
+<tr>
+<td># rm -rf dir1 dir2</td>
+<td>同时删除两个目录及它们的内容</td>
+</tr>
+<tr>
+<td># rmdir dir1</td>
+<td>删除一个叫做 ‘dir1’ 的目录</td>
+</tr>
+<tr>
+<td># touch -t 1607230000 file1</td>
+<td>修改一个文件或目录的时间戳 - (YYMMDDhhmm)</td>
+</tr>
+<tr>
+<td># tree</td>
+<td>显示文件和目录由根目录开始的树形结构</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="文件搜索"><a href="#文件搜索" class="headerlink" title="文件搜索"></a>文件搜索</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td># find / -name file1</td>
+<td>从 ‘/‘ 开始进入根文件系统搜索文件和目录</td>
+</tr>
+<tr>
+<td># find / -user user1</td>
+<td>搜索属于用户 ‘user1’ 的文件和目录</td>
+</tr>
+<tr>
+<td># find /home/user1 -name \*.bin</td>
+<td>在目录 ‘/ home/user1’ 中搜索带有’.bin’ 结尾的文件</td>
+</tr>
+<tr>
+<td># find /usr/bin -type f -atime +100</td>
+<td>搜索在过去100天内未被使用过的执行文件</td>
+</tr>
+<tr>
+<td># find /usr/bin -type f -mtime -10</td>
+<td>搜索在10天内被创建或者修改过的文件</td>
+</tr>
+<tr>
+<td># find / -name *.rpm -exec chmod 755 ‘{}‘ \;</td>
+<td>搜索以 ‘.rpm’ 结尾的文件并定义其权限</td>
+</tr>
+<tr>
+<td># find / -xdev -name \*.rpm</td>
+<td>搜索以 ‘.rpm’ 结尾的文件，忽略光驱、捷盘等可移动设备</td>
+</tr>
+<tr>
+<td># locate \*.ps</td>
+<td>寻找以 ‘.ps’ 结尾的文件 - 先运行 ‘updatedb’ 命令</td>
+</tr>
+<tr>
+<td># whereis halt</td>
+<td>显示一个二进制文件、源码或man的位置</td>
+</tr>
+<tr>
+<td># which halt</td>
+<td>显示一个二进制文件或可执行文件的完整路径</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="挂载一个文件系统"><a href="#挂载一个文件系统" class="headerlink" title="挂载一个文件系统"></a>挂载一个文件系统</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td># fuser -km /mnt/hda2</td>
+<td>当设备繁忙时强制卸载</td>
+</tr>
+<tr>
+<td># mount /dev/hda2 /mnt/hda2</td>
+<td>挂载一个叫做hda2的盘 - 确保目录 ‘/mnt/hda2’ 已经存在</td>
+</tr>
+<tr>
+<td># mount /dev/fd0 /mnt/floppy</td>
+<td>挂载一个软盘</td>
+</tr>
+<tr>
+<td># mount /dev/cdrom /mnt/cdrom</td>
+<td>挂载一个cdrom或dvdrom</td>
+</tr>
+<tr>
+<td># mount /dev/hdc /mnt/cdrecorder</td>
+<td>挂载一个cdrw或dvdrom</td>
+</tr>
+<tr>
+<td># mount /dev/hdb /mnt/cdrecorder</td>
+<td>挂载一个cdrw或dvdrom</td>
+</tr>
+<tr>
+<td># mount -o loop file.iso /mnt/cdrom</td>
+<td>挂载一个文件或ISO镜像文件</td>
+</tr>
+<tr>
+<td># mount -t vfat /dev/hda5 /mnt/hda5</td>
+<td>挂载一个Windows FAT32文件系统</td>
+</tr>
+<tr>
+<td># mount /dev/sda1 /mnt/usbdisk</td>
+<td>挂载一个U盘或闪存设备</td>
+</tr>
+<tr>
+<td># mount -t smbfs -o username=user,password=pass //WinClient/share /mnt/share</td>
+<td>挂载一个windows网络共享</td>
+</tr>
+<tr>
+<td># umount /dev/hda2</td>
+<td>卸载一个叫做hda2的盘 - 先从挂载点 ‘/mnt/hda2’ 退出</td>
+</tr>
+<tr>
+<td># umount -n /mnt/hda2</td>
+<td>运行卸载操作而不写入 /etc/mtab 文件- 当文件为只读或当磁盘写满时非常有用</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="磁盘空间"><a href="#磁盘空间" class="headerlink" title="磁盘空间"></a>磁盘空间</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td># df -h</td>
+<td>显示已经挂载的分区列表</td>
+</tr>
+<tr>
+<td># dpkg-query -W -f=’${Installed-Size;10}t${Package}n’ &#124; sort -k1,1n</td>
+<td>以大小为依据显示已安装的deb包所使用的空间 (ubuntu, debian类系统)</td>
+</tr>
+<tr>
+<td># du -sh dir1</td>
+<td>估算目录 ‘dir1’ 已经使用的磁盘空间</td>
+</tr>
+<tr>
+<td># du -sk * &#124; sort -rn</td>
+<td>以容量大小为依据依次显示文件和目录的大小</td>
+</tr>
+<tr>
+<td># ls -lSr &#124; more</td>
+<td>以尺寸大小排列文件和目录</td>
+</tr>
+<tr>
+<td># rpm -q -a --qf ‘%10{SIZE}t%{NAME}n’ &#124; sort -k1,1n</td>
+<td>以大小为依据依次显示已安装的rpm包所使用的空间 (centos, redhat, fedora类系统)</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="用户和群组"><a href="#用户和群组" class="headerlink" title="用户和群组"></a>用户和群组</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td># chage -E 2016-12-31 user1</td>
+<td>设置用户口令的失效期限</td>
+</tr>
+<tr>
+<td># groupadd [group]</td>
+<td>创建一个新用户组</td>
+</tr>
+<tr>
+<td># groupdel [group]</td>
+<td>删除一个用户组</td>
+</tr>
+<tr>
+<td># groupmod -n moon sun</td>
+<td>重命名一个用户组</td>
+</tr>
+<tr>
+<td># grpck</td>
+<td>检查 ‘/etc/passwd’ 的文件格式和语法修正以及存在的群组</td>
+</tr>
+<tr>
+<td># newgrp - [group]</td>
+<td>登陆进一个新的群组以改变新创建文件的预设群组</td>
+</tr>
+<tr>
+<td># passwd</td>
+<td>修改口令</td>
+</tr>
+<tr>
+<td># passwd user1</td>
+<td>修改一个用户的口令 (只允许root执行)</td>
+</tr>
+<tr>
+<td># pwck</td>
+<td>检查 ‘/etc/passwd’ 的文件格式和语法修正以及存在的用户</td>
+</tr>
+<tr>
+<td># useradd -c “User Linux” -g admin -d /home/user1 -s /bin/bash user1</td>
+<td>创建一个属于 “admin” 用户组的用户</td>
+</tr>
+<tr>
+<td># useradd user1</td>
+<td>创建一个新用户</td>
+</tr>
+<tr>
+<td># userdel -r user1</td>
+<td>删除一个用户 ( ‘-r’ 排除主目录)</td>
+</tr>
+<tr>
+<td># usermod -c “User FTP” -g system -d /ftp/user1 -s /bin/nologin user1</td>
+<td>修改用户属性</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="文件的权限"><a href="#文件的权限" class="headerlink" title="文件的权限"></a>文件的权限</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td># chgrp group1 file1</td>
+<td>改变文件的群组</td>
+</tr>
+<tr>
+<td># chmod ugo+rwx directory1</td>
+<td>设置目录的所有人(u)、群组(g)以及其他人(o)以读(r)、写(w)和执行(x)的权限</td>
+</tr>
+<tr>
+<td># chmod go-rwx directory1</td>
+<td>删除群组(g)与其他人(o)对目录的读写执行权限</td>
+</tr>
+<tr>
+<td># chmod u+s /bin/file1</td>
+<td>设置一个二进制文件的 SUID 位 - 运行该文件的用户也被赋予和所有者同样的权限</td>
+</tr>
+<tr>
+<td># chmod u-s /bin/file1</td>
+<td>禁用一个二进制文件的 SUID 位</td>
+</tr>
+<tr>
+<td># chmod g+s /home/public</td>
+<td>设置一个目录的 SGID 位 - 类似SUID，不过这是针对目录的</td>
+</tr>
+<tr>
+<td># chmod g-s /home/public</td>
+<td>禁用一个目录的 SGID 位</td>
+</tr>
+<tr>
+<td># chmod o+t /home/public</td>
+<td>设置一个文件的 STIKY 位 - 只允许合法所有人删除文件</td>
+</tr>
+<tr>
+<td># chmod o-t /home/public</td>
+<td>禁用一个目录的 STIKY 位</td>
+</tr>
+<tr>
+<td># chown user1 file1</td>
+<td>改变一个文件的所有人属性</td>
+</tr>
+<tr>
+<td># chown -R user1 directory1</td>
+<td>改变一个目录的所有人属性并同时改变改目录下所有文件的属性</td>
+</tr>
+<tr>
+<td># chown user1:group1 file1</td>
+<td>改变一个文件的所有人和群组属性</td>
+</tr>
+<tr>
+<td># find / -perm -u+s</td>
+<td>罗列一个系统中所有使用了SUID控制的文件</td>
+</tr>
+<tr>
+<td># ls -lh</td>
+<td>显示权限</td>
+</tr>
+<tr>
+<td># ls /tmp &#124; pr -T5 -W$COLUMNS</td>
+<td>将终端划分成5栏显示</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="文件的特殊属性"><a href="#文件的特殊属性" class="headerlink" title="文件的特殊属性"></a>文件的特殊属性</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td># chattr +a file1</td>
+<td>只允许以追加方式读写文件</td>
+</tr>
+<tr>
+<td># chattr +c file1</td>
+<td>允许这个文件能被内核自动压缩/解压</td>
+</tr>
+<tr>
+<td># chattr +d file1</td>
+<td>在进行文件系统备份时，dump程序将忽略这个文件</td>
+</tr>
+<tr>
+<td># chattr +i file1</td>
+<td>设置成不可变的文件，不能被删除、修改、重命名或者链接</td>
+</tr>
+<tr>
+<td># chattr +s file1</td>
+<td>允许一个文件被安全地删除</td>
+</tr>
+<tr>
+<td># chattr +S file1</td>
+<td>一旦应用程序对这个文件执行了写操作，使系统立刻把修改的结果写到磁盘</td>
+</tr>
+<tr>
+<td># chattr +u file1</td>
+<td>若文件被删除，系统会允许你在以后恢复这个被删除的文件</td>
+</tr>
+<tr>
+<td># lsattr</td>
+<td>显示特殊的属性</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="打包和压缩文件"><a href="#打包和压缩文件" class="headerlink" title="打包和压缩文件"></a>打包和压缩文件</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td># bunzip2 file1.bz2</td>
+<td>解压一个叫做 ‘file1.bz2’的文件</td>
+</tr>
+<tr>
+<td># bzip2 file1</td>
+<td>压缩一个叫做 ‘file1’ 的文件</td>
+</tr>
+<tr>
+<td># gunzip file1.gz</td>
+<td>解压一个叫做 ‘file1.gz’的文件</td>
+</tr>
+<tr>
+<td># gzip file1</td>
+<td>压缩一个叫做 ‘file1’的文件</td>
+</tr>
+<tr>
+<td># gzip -9 file1</td>
+<td>最大程度压缩</td>
+</tr>
+<tr>
+<td># rar a file1.rar test_file</td>
+<td>创建一个叫做 ‘file1.rar’ 的包</td>
+</tr>
+<tr>
+<td># rar a file1.rar file1 file2 dir1</td>
+<td>同时压缩 ‘file1’, ‘file2’ 以及目录 ‘dir1’</td>
+</tr>
+<tr>
+<td># rar x file1.rar</td>
+<td>解压rar包</td>
+</tr>
+<tr>
+<td># tar -cvf archive.tar file1</td>
+<td>创建一个非压缩的 tarball</td>
+</tr>
+<tr>
+<td># tar -cvf archive.tar file1 file2 dir1</td>
+<td>创建一个包含了 ‘file1’, ‘file2’ 以及 ‘dir1’的档案文件</td>
+</tr>
+<tr>
+<td># tar -tf archive.tar</td>
+<td>显示一个包中的内容</td>
+</tr>
+<tr>
+<td># tar -xvf archive.tar</td>
+<td>释放一个包</td>
+</tr>
+<tr>
+<td># tar -xvf archive.tar -C /tmp</td>
+<td>将压缩包释放到 /tmp目录下</td>
+</tr>
+<tr>
+<td># tar -cvfj archive.tar.bz2 dir1</td>
+<td>创建一个bzip2格式的压缩包</td>
+</tr>
+<tr>
+<td># tar -xvfj archive.tar.bz2</td>
+<td>解压一个bzip2格式的压缩包</td>
+</tr>
+<tr>
+<td># tar -cvfz archive.tar.gz dir1</td>
+<td>创建一个gzip格式的压缩包</td>
+</tr>
+<tr>
+<td># tar -xvfz archive.tar.gz</td>
+<td>解压一个gzip格式的压缩包</td>
+</tr>
+<tr>
+<td># unrar x file1.rar</td>
+<td>解压rar包</td>
+</tr>
+<tr>
+<td># unzip file1.zip</td>
+<td>解压一个zip格式压缩包</td>
+</tr>
+<tr>
+<td># zip file1.zip file1</td>
+<td>创建一个zip格式的压缩包</td>
+</tr>
+<tr>
+<td># zip -r file1.zip file1 file2 dir1</td>
+<td>将几个文件和目录同时压缩成一个zip格式的压缩包</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="RPM包-Fedora-RedHat-and-alike"><a href="#RPM包-Fedora-RedHat-and-alike" class="headerlink" title="RPM包 (Fedora,RedHat and alike)"></a>RPM包 (Fedora,RedHat and alike)</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td># rpm -ivh [package.rpm]</td>
+<td>安装一个rpm包</td>
+</tr>
+<tr>
+<td># rpm -ivh --nodeeps [package.rpm]</td>
+<td>安装一个rpm包而忽略依赖关系警告</td>
+</tr>
+<tr>
+<td># rpm -U [package.rpm]</td>
+<td>更新一个rpm包但不改变其配置文件</td>
+</tr>
+<tr>
+<td># rpm -F [package.rpm]</td>
+<td>更新一个确定已经安装的rpm包</td>
+</tr>
+<tr>
+<td># rpm -e [package]</td>
+<td>删除一个rpm包</td>
+</tr>
+<tr>
+<td># rpm -qa</td>
+<td>显示系统中所有已经安装的rpm包</td>
+</tr>
+<tr>
+<td># rpm -qa &#124; grep httpd</td>
+<td>显示所有名称中包含 “httpd” 字样的rpm包</td>
+</tr>
+<tr>
+<td># rpm -qi [package]</td>
+<td>获取一个已安装包的特殊信息</td>
+</tr>
+<tr>
+<td># rpm -qg “System Environment/Daemons”</td>
+<td>显示一个组件的rpm包</td>
+</tr>
+<tr>
+<td># rpm -ql [package]</td>
+<td>显示一个已经安装的rpm包提供的文件列表</td>
+</tr>
+<tr>
+<td># rpm -qc [package]</td>
+<td>显示一个已经安装的rpm包提供的配置文件列表</td>
+</tr>
+<tr>
+<td># rpm -q [package] --whatrequires</td>
+<td>显示与一个rpm包存在依赖关系的列表</td>
+</tr>
+<tr>
+<td># rpm -q [package] --whatprovides</td>
+<td>显示一个rpm包所占的体积</td>
+</tr>
+<tr>
+<td># rpm -q [package] --scripts</td>
+<td>显示在安装/删除期间所执行的脚本l</td>
+</tr>
+<tr>
+<td># rpm -q [package] --changelog</td>
+<td>显示一个rpm包的修改历史</td>
+</tr>
+<tr>
+<td># rpm -qf /etc/httpd/conf/httpd.conf</td>
+<td>确认所给的文件由哪个rpm包所提供</td>
+</tr>
+<tr>
+<td># rpm -qp [package.rpm] -l</td>
+<td>显示由一个尚未安装的rpm包提供的文件列表</td>
+</tr>
+<tr>
+<td># rpm --import /media/cdrom/RPM-GPG-KEY</td>
+<td>导入公钥数字证书</td>
+</tr>
+<tr>
+<td># rpm --checksig [package.rpm]</td>
+<td>确认一个rpm包的完整性</td>
+</tr>
+<tr>
+<td># rpm -qa gpg-pubkey</td>
+<td>确认已安装的所有rpm包的完整性</td>
+</tr>
+<tr>
+<td># rpm -V [package]</td>
+<td>检查文件尺寸、 许可、类型、所有者、群组、MD5检查以及最后修改时间</td>
+</tr>
+<tr>
+<td># rpm -Va</td>
+<td>检查系统中所有已安装的rpm包- 小心使用</td>
+</tr>
+<tr>
+<td># rpm -Vp [package.rpm]</td>
+<td>确认一个rpm包还未安装</td>
+</tr>
+<tr>
+<td># rpm -ivh /usr/src/redhat/RPMS/`arch`/[package.rpm]</td>
+<td>从一个rpm源码安装一个构建好的包</td>
+</tr>
+<tr>
+<td># rpm2cpio [package.rpm] &#124; cpio --extract --make-directories *bin*</td>
+<td>从一个rpm包运行可执行文件</td>
+</tr>
+<tr>
+<td># rpmbuild --rebuild [package.src.rpm]</td>
+<td>从一个rpm源码构建一个 rpm 包</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="YUM-软件工具-Fedora-RedHat-and-alike"><a href="#YUM-软件工具-Fedora-RedHat-and-alike" class="headerlink" title="YUM 软件工具 (Fedora,RedHat and alike)"></a>YUM 软件工具 (Fedora,RedHat and alike)</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td># yum -y install [package]</td>
+<td>下载并安装一个rpm包</td>
+</tr>
+<tr>
+<td># yum localinstall [package.rpm]</td>
+<td>将安装一个rpm包，使用你自己的软件仓库为你解决所有依赖关系</td>
+</tr>
+<tr>
+<td># yum -y update</td>
+<td>更新当前系统中所有安装的rpm包</td>
+</tr>
+<tr>
+<td># yum update [package]</td>
+<td>更新一个rpm包</td>
+</tr>
+<tr>
+<td># yum remove [package]</td>
+<td>删除一个rpm包</td>
+</tr>
+<tr>
+<td># yum list</td>
+<td>列出当前系统中安装的所有包</td>
+</tr>
+<tr>
+<td># yum repolist</td>
+<td>显示可用的仓库</td>
+</tr>
+<tr>
+<td># yum search [package]</td>
+<td>在rpm仓库中搜寻软件包</td>
+</tr>
+<tr>
+<td># yum clean [package]</td>
+<td>清理rpm缓存删除下载的包</td>
+</tr>
+<tr>
+<td># yum clean headers</td>
+<td>删除所有头文件</td>
+</tr>
+<tr>
+<td># yum clean all</td>
+<td>删除所有缓存的包和头文件</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="DEB-包-Debian-Ubuntu-and-alike"><a href="#DEB-包-Debian-Ubuntu-and-alike" class="headerlink" title="DEB 包 (Debian, Ubuntu and alike)"></a>DEB 包 (Debian, Ubuntu and alike)</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td># dpkg -i [package.deb]</td>
+<td>安装/更新一个 deb 包</td>
+</tr>
+<tr>
+<td># dpkg -r [package]</td>
+<td>从系统删除一个 deb 包</td>
+</tr>
+<tr>
+<td># dpkg -l</td>
+<td>显示系统中所有已经安装的 deb 包</td>
+</tr>
+<tr>
+<td># dpkg -l &#124; grep httpd</td>
+<td>显示所有名称中包含 “httpd” 字样的deb包</td>
+</tr>
+<tr>
+<td># dpkg -s [package]</td>
+<td>获得已经安装在系统中一个特殊包的信息</td>
+</tr>
+<tr>
+<td># dpkg -L [package]</td>
+<td>显示系统中已经安装的一个deb包所提供的文件列表</td>
+</tr>
+<tr>
+<td># dpkg --contents [package.deb]</td>
+<td>显示尚未安装的一个包所提供的文件列表</td>
+</tr>
+<tr>
+<td># dpkg -S /bin/ping</td>
+<td>确认所给的文件由哪个deb包提供</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="APT-软件工具-Debian-Ubuntu-and-alike"><a href="#APT-软件工具-Debian-Ubuntu-and-alike" class="headerlink" title="APT 软件工具 (Debian, Ubuntu and alike)"></a>APT 软件工具 (Debian, Ubuntu and alike)</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td># apt-cache search [package]</td>
+<td>返回包含所要搜索字符串的软件包名称</td>
+</tr>
+<tr>
+<td># apt-cdrom install [package]</td>
+<td>从光盘安装/更新一个 deb 包</td>
+</tr>
+<tr>
+<td># apt-get install [package]</td>
+<td>安装/更新一个 deb 包</td>
+</tr>
+<tr>
+<td># apt-get update</td>
+<td>升级列表中的软件包</td>
+</tr>
+<tr>
+<td># apt-get upgrade</td>
+<td>升级所有已安装的软件</td>
+</tr>
+<tr>
+<td># apt-get remove [package]</td>
+<td>从系统删除一个deb包</td>
+</tr>
+<tr>
+<td># apt-get check</td>
+<td>确认依赖的软件仓库正确</td>
+</tr>
+<tr>
+<td># apt-get clean</td>
+<td>从下载的软件包中清理缓存</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="Pacman-软件工具-Arch-Frugalware-and-alike"><a href="#Pacman-软件工具-Arch-Frugalware-and-alike" class="headerlink" title="Pacman 软件工具 (Arch, Frugalware and alike)"></a>Pacman 软件工具 (Arch, Frugalware and alike)</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td># pacman -S name</td>
+<td>根据依赖关系安装名为“name“的软件包</td>
+</tr>
+<tr>
+<td># pacman -R name</td>
+<td>删除软件包”name” 及其所以文件</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="查看文件内容"><a href="#查看文件内容" class="headerlink" title="查看文件内容"></a>查看文件内容</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td># cat file1</td>
+<td>从第一个字节开始正向查看文件的内容</td>
+</tr>
+<tr>
+<td># head -2 file1</td>
+<td>查看一个文件的前两行</td>
+</tr>
+<tr>
+<td># less file1</td>
+<td>类似于 ‘more’ 命令，但是它允许在文件中和正向操作一样的反向操作</td>
+</tr>
+<tr>
+<td># more file1</td>
+<td>查看一个长文件的内容</td>
+</tr>
+<tr>
+<td># tac file1</td>
+<td>从最后一行开始反向查看一个文件的内容</td>
+</tr>
+<tr>
+<td># tail -2 file1</td>
+<td>查看一个文件的最后两行</td>
+</tr>
+<tr>
+<td># tail -f /var/log/messages</td>
+<td>实时查看被添加到一个文件中的内容</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="文本处理"><a href="#文本处理" class="headerlink" title="文本处理"></a>文本处理</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td># cat example.txt &#124; awk ‘NR%2==1’</td>
+<td>删除example.txt文件中的所有偶数行</td>
+</tr>
+<tr>
+<td># echo a b c &#124; awk ‘{print $1}‘</td>
+<td>查看一行第一栏</td>
+</tr>
+<tr>
+<td># echo a b c &#124; awk ‘{print $1,$3}‘</td>
+<td>查看一行的第一和第三栏</td>
+</tr>
+<tr>
+<td># cat -n file1</td>
+<td>标示文件的行数</td>
+</tr>
+<tr>
+<td># comm -1 file1 file2</td>
+<td>比较两个文件的内容只删除 ‘file1’ 所包含的内容</td>
+</tr>
+<tr>
+<td># comm -2 file1 file2</td>
+<td>比较两个文件的内容只删除 ‘file2’ 所包含的内容</td>
+</tr>
+<tr>
+<td># comm -3 file1 file2</td>
+<td>比较两个文件的内容只删除两个文件共有的部分</td>
+</tr>
+<tr>
+<td># diff file1 file2</td>
+<td>找出两个文件内容的不同处</td>
+</tr>
+<tr>
+<td># grep Aug /var/log/messages</td>
+<td>在文件 ‘/var/log/messages’中查找关键词”Aug”</td>
+</tr>
+<tr>
+<td># grep ^Aug /var/log/messages</td>
+<td>在文件 ‘/var/log/messages’中查找以”Aug”开始的词汇</td>
+</tr>
+<tr>
+<td># grep [0-9] /var/log/messages</td>
+<td>选择 ‘/var/log/messages’ 文件中所有包含数字的行</td>
+</tr>
+<tr>
+<td># grep Aug -R /var/log/*</td>
+<td>在目录 ‘/var/log’ 及随后的目录中搜索字符串”Aug”</td>
+</tr>
+<tr>
+<td># paste file1 file2</td>
+<td>合并两个文件或两栏的内容</td>
+</tr>
+<tr>
+<td># paste -d ‘+‘ file1 file2</td>
+<td>合并两个文件或两栏的内容，中间用”+“区分</td>
+</tr>
+<tr>
+<td># sdiff file1 file2</td>
+<td>以对比的方式显示两个文件的不同</td>
+</tr>
+<tr>
+<td># sed ‘s/string1/string2/g’ example.txt</td>
+<td>将example.txt文件中的 “string1” 替换成 “string2”</td>
+</tr>
+<tr>
+<td># sed ‘/^$/d’ example.txt</td>
+<td>从example.txt文件中删除所有空白行</td>
+</tr>
+<tr>
+<td># sed ‘/ *&#124;#/d; /^$/d’ example.txt</td>
+<td>去除文件example.txt中的注释与空行</td>
+</tr>
+<tr>
+<td># sed -e ‘1d’ exampe.txt</td>
+<td>从文件example.txt 中排除第一行</td>
+</tr>
+<tr>
+<td># sed -n ‘/string1/p’</td>
+<td>查看只包含词汇 “string1”的行</td>
+</tr>
+<tr>
+<td># sed -e ‘s/ *$//‘ example.txt</td>
+<td>删除每一行最后的空白字符</td>
+</tr>
+<tr>
+<td># sed -e ‘s/string1//g’ example.txt</td>
+<td>从文档中只删除词汇 “string1” 并保留剩余全部</td>
+</tr>
+<tr>
+<td># sed -n ‘1,5p’ example.txt</td>
+<td>显示文件1至5行的内容</td>
+</tr>
+<tr>
+<td># sed -n ‘5p;5q’ example.txt</td>
+<td>显示example.txt文件的第5行内容</td>
+</tr>
+<tr>
+<td># sed -e ‘s/00*/0/g’ example.txt</td>
+<td>用单个零替换多个零</td>
+</tr>
+<tr>
+<td># sort file1 file2</td>
+<td>排序两个文件的内容</td>
+</tr>
+<tr>
+<td># sort file1 file2 &#124; uniq</td>
+<td>取出两个文件的并集(重复的行只保留一份)</td>
+</tr>
+<tr>
+<td># sort file1 file2 &#124; uniq -u</td>
+<td>删除交集，留下其他的行</td>
+</tr>
+<tr>
+<td># sort file1 file2 &#124; uniq -d</td>
+<td>取出两个文件的交集(只留下同时存在于两个文件中的文件)</td>
+</tr>
+<tr>
+<td># echo ‘word’ &#124; tr ‘[:lower:]‘ ‘[:upper:]‘</td>
+<td>合并上下单元格内容</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="字符设置和文件格式"><a href="#字符设置和文件格式" class="headerlink" title="字符设置和文件格式"></a>字符设置和文件格式</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td># dos2unix filedos.txt fileunix.txt</td>
+<td>将一个文本文件的格式从MSDOS转换成UNIX</td>
+</tr>
+<tr>
+<td># recode ..HTML &lt; page.txt &gt; page.html</td>
+<td>将一个文本文件转换成html</td>
+</tr>
+<tr>
+<td># recode -l &#124; more</td>
+<td>显示所有允许的转换格式</td>
+</tr>
+<tr>
+<td># unix2dos fileunix.txt filedos.txt</td>
+<td>将一个文本文件的格式从UNIX转换成MSDOS</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="文件系统分析"><a href="#文件系统分析" class="headerlink" title="文件系统分析"></a>文件系统分析</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td># badblocks -v /dev/hda1</td>
+<td>检查磁盘hda1上的坏磁块</td>
+</tr>
+<tr>
+<td># dosfsck /dev/hda1</td>
+<td>修复/检查hda1磁盘上dos文件系统的完整性</td>
+</tr>
+<tr>
+<td># e2fsck /dev/hda1</td>
+<td>修复/检查hda1磁盘上ext2文件系统的完整性</td>
+</tr>
+<tr>
+<td># e2fsck -j /dev/hda1</td>
+<td>修复/检查hda1磁盘上ext3文件系统的完整性</td>
+</tr>
+<tr>
+<td># fsck /dev/hda1</td>
+<td>修复/检查hda1磁盘上linux文件系统的完整性</td>
+</tr>
+<tr>
+<td># fsck.ext2 /dev/hda1</td>
+<td>修复/检查hda1磁盘上ext2文件系统的完整性</td>
+</tr>
+<tr>
+<td># fsck.ext3 /dev/hda1</td>
+<td>修复/检查hda1磁盘上ext3文件系统的完整性</td>
+</tr>
+<tr>
+<td># fsck.vfat /dev/hda1</td>
+<td>修复/检查hda1磁盘上fat文件系统的完整性</td>
+</tr>
+<tr>
+<td># fsck.msdos /dev/hda1</td>
+<td>修复/检查hda1磁盘上dos文件系统的完整性</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="初始化一个文件系统"><a href="#初始化一个文件系统" class="headerlink" title="初始化一个文件系统"></a>初始化一个文件系统</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td># fdformat -n /dev/fd0</td>
+<td>格式化一个软盘</td>
+</tr>
+<tr>
+<td># mke2fs /dev/hda1</td>
+<td>在hda1分区创建一个linux ext2的文件系统</td>
+</tr>
+<tr>
+<td># mke2fs -j /dev/hda1</td>
+<td>在hda1分区创建一个linux ext3(日志型)的文件系统</td>
+</tr>
+<tr>
+<td># mkfs /dev/hda1</td>
+<td>在hda1分区创建一个文件系统</td>
+</tr>
+<tr>
+<td># mkfs -t vfat 32 -F /dev/hda1</td>
+<td>创建一个 FAT32 文件系统</td>
+</tr>
+<tr>
+<td># mkswap /dev/hda3</td>
+<td>创建一个swap文件系统</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="SWAP-文件系统"><a href="#SWAP-文件系统" class="headerlink" title="SWAP 文件系统"></a>SWAP 文件系统</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td># mkswap /dev/hda3</td>
+<td>创建一个swap文件系统</td>
+</tr>
+<tr>
+<td># swapon /dev/hda3</td>
+<td>启用一个新的swap文件系统</td>
+</tr>
+<tr>
+<td># swapon /dev/hda2 /dev/hdb3</td>
+<td>启用两个swap分区</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td># find /var/log -name ‘*.log’ &#124; tar cv --files-from=- &#124; bzip2 &gt; log.tar.bz2</td>
+<td>查找所有以 ‘.log’ 结尾的文件并做成一个bzip包</td>
+</tr>
+<tr>
+<td># find /home/user1 -name ‘*.txt’ &#124; xargs cp -av --target-directory=/home/backup/ --parents</td>
+<td>从一个目录查找并复制所有以 ‘.txt’ 结尾的文件到另一个目录</td>
+</tr>
+<tr>
+<td># dd bs=1M if=/dev/hda &#124; gzip &#124; ssh user@ip_addr ‘dd of=hda.gz’</td>
+<td>通过ssh在远程主机上执行一次备份本地磁盘的操作</td>
+</tr>
+<tr>
+<td># dd if=/dev/sda of=/tmp/file1</td>
+<td>备份磁盘内容到一个文件</td>
+</tr>
+<tr>
+<td># dd if=/dev/hda of=/dev/fd0 bs=512 count=1</td>
+<td>做一个将 MBR (Master Boot Record)内容复制到软盘的动作</td>
+</tr>
+<tr>
+<td># dd if=/dev/fd0 of=/dev/hda bs=512 count=1</td>
+<td>从已经保存到软盘的备份中恢复MBR内容</td>
+</tr>
+<tr>
+<td># dump -0aj -f /tmp/home0.bak /home</td>
+<td>制作一个 ‘/home’ 目录的完整备份</td>
+</tr>
+<tr>
+<td># dump -1aj -f /tmp/home0.bak /home</td>
+<td>制作一个 ‘/home’ 目录的交互式备份</td>
+</tr>
+<tr>
+<td># restore -if /tmp/home0.bak</td>
+<td>还原一个交互式备份</td>
+</tr>
+<tr>
+<td># rsync -rogpav --delete /home /tmp</td>
+<td>同步两边的目录</td>
+</tr>
+<tr>
+<td># rsync -rogpav -e ssh --delete /home ip_address:/tmp</td>
+<td>通过SSH通道rsync</td>
+</tr>
+<tr>
+<td># rsync -az -e ssh --delete ip_addr:/home/public /home/local</td>
+<td>通过ssh和压缩将一个远程目录同步到本地目录</td>
+</tr>
+<tr>
+<td># rsync -az -e ssh --delete /home/local ip_addr:/home/public</td>
+<td>通过ssh和压缩将本地目录同步到远程目录</td>
+</tr>
+<tr>
+<td># tar -Puf backup.tar /home/user</td>
+<td>执行一次对 ‘/home/user’ 目录的交互式备份操作</td>
+</tr>
+<tr>
+<td># ( cd /tmp/local/ &amp;&amp; tar c . ) &#124; ssh -C user@ip_addr ‘cd /home/share/ &amp;&amp; tar x -p’</td>
+<td>通过ssh在远程目录中复制一个目录内容</td>
+</tr>
+<tr>
+<td># ( tar c /home ) &#124; ssh -C user@ip_addr ‘cd /home/backup-home &amp;&amp; tar x -p’</td>
+<td>通过ssh在远程目录中复制一个本地目录</td>
+</tr>
+<tr>
+<td># tar cf - . &#124; (cd /tmp/backup ; tar xf - )</td>
+<td>本地将一个目录复制到另一个地方，保留原有权限及链接</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="光盘"><a href="#光盘" class="headerlink" title="光盘"></a>光盘</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td># cd-paranoia -B</td>
+<td>从一个CD光盘转录音轨到 wav 文件中</td>
+</tr>
+<tr>
+<td># cd-paranoia --</td>
+<td>从一个CD光盘转录音轨到 wav 文件中（参数-3）</td>
+</tr>
+<tr>
+<td># cdrecord -v gracetime=2 dev=/dev/cdrom -eject blank=fast -force</td>
+<td>清空一个可复写的光盘内容</td>
+</tr>
+<tr>
+<td># cdrecord -v dev=/dev/cdrom cd.iso</td>
+<td>刻录一个ISO镜像文件</td>
+</tr>
+<tr>
+<td># gzip -dc cd_iso.gz &#124; cdrecord dev=/dev/cdrom -</td>
+<td>刻录一个压缩了的ISO镜像文件</td>
+</tr>
+<tr>
+<td># cdrecord --scanbus</td>
+<td>扫描总线以识别scsi通道</td>
+</tr>
+<tr>
+<td># dd if=/dev/hdc &#124; md5sum</td>
+<td>校验一个设备的md5sum编码，例如一张 CD</td>
+</tr>
+<tr>
+<td># mkisofs /dev/cdrom &gt; cd.iso</td>
+<td>在磁盘上创建一个光盘的iso镜像文件</td>
+</tr>
+<tr>
+<td># mkisofs /dev/cdrom &#124; gzip &gt; cd_iso.gz</td>
+<td>在磁盘上创建一个压缩了的光盘iso镜像文件</td>
+</tr>
+<tr>
+<td># mkisofs -J -allow-leading-dots -R -V</td>
+<td>创建一个目录的iso镜像文件</td>
+</tr>
+<tr>
+<td># mount -o loop cd.iso /mnt/iso</td>
+<td>挂载一个ISO镜像文件</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="网络-LAN-WiFi"><a href="#网络-LAN-WiFi" class="headerlink" title="网络 (LAN / WiFi)"></a>网络 (LAN / WiFi)</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td># dhclient eth0</td>
+<td>以dhcp模式启用 ‘eth0’ 网络设备</td>
+</tr>
+<tr>
+<td># ethtool eth0</td>
+<td>显示网卡 ‘eth0’ 的流量统计</td>
+</tr>
+<tr>
+<td># host www.example.com</td>
+<td>查找主机名以解析名称与IP地址及镜像</td>
+</tr>
+<tr>
+<td># hostname</td>
+<td>显示主机名</td>
+</tr>
+<tr>
+<td># ifconfig eth0</td>
+<td>显示一个以太网卡的配置</td>
+</tr>
+<tr>
+<td># ifconfig eth0 192.168.1.1 netmask 255.255.255.0</td>
+<td>控制IP地址</td>
+</tr>
+<tr>
+<td># ifconfig eth0 promisc</td>
+<td>设置 ‘eth0’ 成混杂模式以嗅探数据包 (sniffing)</td>
+</tr>
+<tr>
+<td># ifdown eth0</td>
+<td>禁用一个 ‘eth0’ 网络设备</td>
+</tr>
+<tr>
+<td># ifup eth0</td>
+<td>启用一个 ‘eth0’ 网络设备</td>
+</tr>
+<tr>
+<td># ip link show</td>
+<td>显示所有网络设备的连接状态</td>
+</tr>
+<tr>
+<td># iwconfig eth1</td>
+<td>显示一个无线网卡的配置</td>
+</tr>
+<tr>
+<td># iwlist scan</td>
+<td>显示无线网络</td>
+</tr>
+<tr>
+<td># mii-tool eth0</td>
+<td>显示 ‘eth0’的连接状态</td>
+</tr>
+<tr>
+<td># netstat -tup</td>
+<td>显示所有启用的网络连接和它们的 PID</td>
+</tr>
+<tr>
+<td># netstat -tupl</td>
+<td>显示系统中所有监听的网络服务和它们的 PID</td>
+</tr>
+<tr>
+<td># netstat -rn</td>
+<td>显示路由表，类似于“route -n”命令</td>
+</tr>
+<tr>
+<td># nslookup www.example.com</td>
+<td>查找主机名以解析名称与IP地址及镜像</td>
+</tr>
+<tr>
+<td># route -n</td>
+<td>显示路由表</td>
+</tr>
+<tr>
+<td># route add -net 0/0 gw IP_Gateway</td>
+<td>控制预设网关</td>
+</tr>
+<tr>
+<td># route add -net 192.168.0.0 netmask 255.255.0.0 gw 192.168.1.1</td>
+<td>控制通向网络 ‘192.168.0.0/16’ 的静态路由</td>
+</tr>
+<tr>
+<td># route del 0/0 gw IP_gateway</td>
+<td>删除静态路由</td>
+</tr>
+<tr>
+<td># echo “1” &gt; /proc/sys/net/ipv4/ip_forward</td>
+<td>激活IP转发</td>
+</tr>
+<tr>
+<td># tcpdump tcp port 80</td>
+<td>显示所有 HTTP回环</td>
+</tr>
+<tr>
+<td># whois www.example.com</td>
+<td>在 Whois 数据库中查找</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="Microsoft-windows-网络-samba"><a href="#Microsoft-windows-网络-samba" class="headerlink" title="Microsoft windows 网络 (samba)"></a>Microsoft windows 网络 (samba)</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td># mount -t smbfs -o username=user,password=pass //WinClient/share /mnt/share</td>
+<td>挂载一个windows网络共享</td>
+</tr>
+<tr>
+<td># nbtscan ip_addr</td>
+<td>netbios名解析</td>
+</tr>
+<tr>
+<td># nmblookup -A ip_addr</td>
+<td>netbios名解析</td>
+</tr>
+<tr>
+<td># smbclient -L ip_addr/hostname</td>
+<td>显示一台windows主机的远程共享</td>
+</tr>
+<tr>
+<td># smbget -Rr smb://ip_addr/share</td>
+<td>像wget一样能够通过smb从一台windows主机上下载文件</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="IPTABLES-firewall"><a href="#IPTABLES-firewall" class="headerlink" title="IPTABLES (firewall)"></a>IPTABLES (firewall)</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td># iptables -t filter -L</td>
+<td>显示过滤表的所有链路</td>
+</tr>
+<tr>
+<td># iptables -t nat -L</td>
+<td>显示nat表的所有链路</td>
+</tr>
+<tr>
+<td># iptables -t filter -F</td>
+<td>以过滤表为依据清理所有规则</td>
+</tr>
+<tr>
+<td># iptables -t nat -F</td>
+<td>以nat表为依据清理所有规则</td>
+</tr>
+<tr>
+<td># iptables -t filter -X</td>
+<td>删除所有由用户创建的链路</td>
+</tr>
+<tr>
+<td># iptables -t filter -A INPUT -p tcp --dport telnet -j ACCEPT</td>
+<td>允许telnet接入</td>
+</tr>
+<tr>
+<td># iptables -t filter -A OUTPUT -p tcp --dport http -j DROP</td>
+<td>阻止 HTTP 连出</td>
+</tr>
+<tr>
+<td># iptables -t filter -A FORWARD -p tcp --dport pop3 -j ACCEPT</td>
+<td>允许转发链路上的 POP3 连接</td>
+</tr>
+<tr>
+<td># iptables -t filter -A INPUT -j LOG --log-prefix</td>
+<td>记录所有链路中被查封的包</td>
+</tr>
+<tr>
+<td># iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE</td>
+<td>设置一个 PAT (端口地址转换) 在 eth0 掩盖发出包</td>
+</tr>
+<tr>
+<td># iptables -t nat -A PREROUTING -d 192.168.0.1 -p tcp -m tcp --dport 22 -j DNAT --to-destination 10.0.0.2:22</td>
+<td>将发往一个主机地址的包转向到其他主机</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="监视和调试"><a href="#监视和调试" class="headerlink" title="监视和调试"></a>监视和调试</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td># free -m</td>
+<td>以兆为单位罗列RAM状态</td>
+</tr>
+<tr>
+<td># kill -9 process_id</td>
+<td>强行关闭进程并结束它</td>
+</tr>
+<tr>
+<td># kill -1 process_id</td>
+<td>强制一个进程重载其配置</td>
+</tr>
+<tr>
+<td># last reboot</td>
+<td>显示重启历史</td>
+</tr>
+<tr>
+<td># lsmod</td>
+<td>罗列装载的内核模块</td>
+</tr>
+<tr>
+<td># lsof -p process_id</td>
+<td>罗列一个由进程打开的文件列表</td>
+</tr>
+<tr>
+<td># lsof /home/user1</td>
+<td>罗列所给系统路径中所打开的文件的列表</td>
+</tr>
+<tr>
+<td># ps -eafw</td>
+<td>罗列linux任务</td>
+</tr>
+<tr>
+<td># ps -e -o pid,args --forest</td>
+<td>以分级的方式罗列linux任务</td>
+</tr>
+<tr>
+<td># pstree</td>
+<td>以树状图显示程序</td>
+</tr>
+<tr>
+<td># smartctl -A /dev/hda</td>
+<td>通过启用SMART监控硬盘设备的可靠性</td>
+</tr>
+<tr>
+<td># smartctl -i /dev/hda</td>
+<td>检查一个硬盘设备的 SMART 是否启用</td>
+</tr>
+<tr>
+<td># strace -c ls &gt;/dev/null</td>
+<td>罗列系统 calls made并用一个进程接收</td>
+</tr>
+<tr>
+<td># strace -f -e open ls &gt;/dev/null</td>
+<td>罗列库调用</td>
+</tr>
+<tr>
+<td># tail /var/log/dmesg</td>
+<td>显示内核引导过程中的内部事件</td>
+</tr>
+<tr>
+<td># tail /var/log/messages</td>
+<td>显示系统事件</td>
+</tr>
+<tr>
+<td># top</td>
+<td>罗列使用CPU资源最多的linux任务</td>
+</tr>
+<tr>
+<td># watch -n1 ‘cat /proc/interrupts’</td>
+<td>罗列实时中断</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td># alias hh=’history’</td>
+<td>为命令history(历史)设置一个别名</td>
+</tr>
+<tr>
+<td># apropos ...keyword</td>
+<td>罗列一个包括程序关键词的命令列表，当你仅知晓程序是干什么，而又记不得命令时特别有用</td>
+</tr>
+<tr>
+<td># chsh</td>
+<td>改变shell命令</td>
+</tr>
+<tr>
+<td># chsh --list-shells</td>
+<td>用于了解你是否必须远程连接到别的机器的不错的命令</td>
+</tr>
+<tr>
+<td># gpg -c file1</td>
+<td>用GNU Privacy Guard加密一个文件</td>
+</tr>
+<tr>
+<td># gpg file1.gpg</td>
+<td>用GNU Privacy Guard解密一个文件</td>
+</tr>
+<tr>
+<td># ldd /usr/bin/ssh</td>
+<td>显示ssh程序所依赖的共享库</td>
+</tr>
+<tr>
+<td># man ping</td>
+<td>罗列在线手册页（例如ping 命令）</td>
+</tr>
+<tr>
+<td># mkbootdisk --device /dev/fd0 `uname -r`</td>
+<td>创建一个引导软盘</td>
+</tr>
+<tr>
+<td># wget -r www.example.com</td>
+<td>下载一个完整的web站点</td>
+</tr>
+<tr>
+<td># wget -c www.example.com/file.iso</td>
+<td>以支持断点续传的方式下载一个文件</td>
+</tr>
+<tr>
+<td># echo ‘wget -c www.example.com/files.iso’ &#124; at 09:00</td>
+<td>在任何给定的时间开始一次下载</td>
+</tr>
+<tr>
+<td># whatis ...keyword</td>
+<td>罗列该程序功能的说明</td>
+</tr>
+<tr>
+<td># who -a</td>
+<td>显示谁正登录在线，并打印出：系统最后引导的时间，关机进程，系统登录进程以及由init启动的进程，当前运行级和最后一次系统时钟的变化</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>完毕！</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>【参考资料】</td>
+<td></td>
+</tr>
+<tr>
+<td><a class="link"   target="_blank" rel="noopener" href="http://www.linuxguide.it/" >http://www.linuxguide.it<i class="fas fa-external-link-alt"></i></a></td>
+<td></td>
+</tr>
+<tr>
+<td><a class="link"   target="_blank" rel="noopener" href="http://man.linuxde.net/" >http://man.linuxde.net<i class="fas fa-external-link-alt"></i></a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+        </div>
+
+        
+
+        
+            <div class="article-nav">
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2021/11/05/git/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Git笔记</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span>
+              -
+            
+            2021&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">听话的便当🍱</a>
+        </div>
+        
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.3</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+            <li class="tools-item rss flex-center">
+                <a class="flex-center"
+                   href="/atom.xml"
+                   target="_blank"
+                >
+                    <i class="fas fa-rss"></i>
+                </a>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%AC%E9%92%A5%E7%A7%81%E9%92%A5"><span class="nav-number">2.</span> <span class="nav-text">公钥私钥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF"><span class="nav-number">3.</span> <span class="nav-text">系统信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E6%9C%BA"><span class="nav-number">4.</span> <span class="nav-text">关机</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E5%92%8C%E7%9B%AE%E5%BD%95"><span class="nav-number">5.</span> <span class="nav-text">文件和目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E6%90%9C%E7%B4%A2"><span class="nav-number">6.</span> <span class="nav-text">文件搜索</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8C%82%E8%BD%BD%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F"><span class="nav-number">7.</span> <span class="nav-text">挂载一个文件系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A3%81%E7%9B%98%E7%A9%BA%E9%97%B4"><span class="nav-number">8.</span> <span class="nav-text">磁盘空间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8%E6%88%B7%E5%92%8C%E7%BE%A4%E7%BB%84"><span class="nav-number">9.</span> <span class="nav-text">用户和群组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E7%9A%84%E6%9D%83%E9%99%90"><span class="nav-number">10.</span> <span class="nav-text">文件的权限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E7%9A%84%E7%89%B9%E6%AE%8A%E5%B1%9E%E6%80%A7"><span class="nav-number">11.</span> <span class="nav-text">文件的特殊属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%93%E5%8C%85%E5%92%8C%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6"><span class="nav-number">12.</span> <span class="nav-text">打包和压缩文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RPM%E5%8C%85-Fedora-RedHat-and-alike"><span class="nav-number">13.</span> <span class="nav-text">RPM包 (Fedora,RedHat and alike)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#YUM-%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7-Fedora-RedHat-and-alike"><span class="nav-number">14.</span> <span class="nav-text">YUM 软件工具 (Fedora,RedHat and alike)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DEB-%E5%8C%85-Debian-Ubuntu-and-alike"><span class="nav-number">15.</span> <span class="nav-text">DEB 包 (Debian, Ubuntu and alike)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#APT-%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7-Debian-Ubuntu-and-alike"><span class="nav-number">16.</span> <span class="nav-text">APT 软件工具 (Debian, Ubuntu and alike)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pacman-%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7-Arch-Frugalware-and-alike"><span class="nav-number">17.</span> <span class="nav-text">Pacman 软件工具 (Arch, Frugalware and alike)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9"><span class="nav-number">18.</span> <span class="nav-text">查看文件内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E6%9C%AC%E5%A4%84%E7%90%86"><span class="nav-number">19.</span> <span class="nav-text">文本处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E8%AE%BE%E7%BD%AE%E5%92%8C%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F"><span class="nav-number">20.</span> <span class="nav-text">字符设置和文件格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90"><span class="nav-number">21.</span> <span class="nav-text">文件系统分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F"><span class="nav-number">22.</span> <span class="nav-text">初始化一个文件系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SWAP-%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F"><span class="nav-number">23.</span> <span class="nav-text">SWAP 文件系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%87%E4%BB%BD"><span class="nav-number">24.</span> <span class="nav-text">备份</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%89%E7%9B%98"><span class="nav-number">25.</span> <span class="nav-text">光盘</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C-LAN-WiFi"><span class="nav-number">26.</span> <span class="nav-text">网络 (LAN &#x2F; WiFi)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Microsoft-windows-%E7%BD%91%E7%BB%9C-samba"><span class="nav-number">27.</span> <span class="nav-text">Microsoft windows 网络 (samba)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IPTABLES-firewall"><span class="nav-number">28.</span> <span class="nav-text">IPTABLES (firewall)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%91%E8%A7%86%E5%92%8C%E8%B0%83%E8%AF%95"><span class="nav-number">29.</span> <span class="nav-text">监视和调试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-number">30.</span> <span class="nav-text">其他</span></a></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/local-search.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/code-copy.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/lazyload.js"></script>
+
+
+<div class="post-scripts pjax">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/toc.js"></script>
+    
+</div>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.3/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>
